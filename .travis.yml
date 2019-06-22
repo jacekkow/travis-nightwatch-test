@@ -1,8 +1,6 @@
 language: php
 php:
-  - 5.6
   - 7.0
-  - nightly
 
 addons:
   firefox: latest
@@ -11,8 +9,7 @@ addons:
 before_script:
   - 'php -S 127.0.0.1:8080 &'
   - 'nvm install stable'
-  - 'npm install nightwatch selenium-server chromedriver geckodriver'
+  - 'npm install nightwatch@1.1.0 selenium-server chromedriver geckodriver'
 
 script:
-  - 'node_modules/.bin/nightwatch --verbose -e firefox-headless'
-  - 'node_modules/.bin/nightwatch --verbose -e chrome-headless'
+  - 'node_modules/.bin/nightwatch -e firefox-headless'
