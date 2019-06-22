@@ -11,7 +11,7 @@ addons:
 before_script:
   - 'php -S 127.0.0.1:8080 &'
   - 'nvm install stable'
-  - 'npm install nightwatch selenium-server chromedriver geckodriver'
+  - 'npm install nightwatch@1.0.19 selenium-server chromedriver geckodriver'
 
 script:
   - 'node_modules/.bin/nightwatch --verbose -e firefox-headless'
